@@ -1,0 +1,359 @@
+/* RULES 
+
+    1.Positions 
+    (Display:inline,inline-block,flex,grid. 
+    Positions:relative,absolute,fixed).
+    2.Box Model 
+    (Margin,padding,height,width)
+    3.Fonts
+    (Font-zize,f.family,f.width,f.style)
+    4.Visuals
+    (box-shadow, border, border-radius)
+    5.Others
+
+*/
+
+/* BASIC STYLES */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'DM Sans', sans-serif;
+}
+/* VARIABLES */
+
+:root{
+    --textcolor1:#fff;
+    --textcolor2:#000;
+    --bitcoin:#F7931A;
+    --softorange:#FFE9D5;
+    --secondaryblue:#1A9AF7;
+    --softblue:#E7F5FF;
+    --warmblack1:#201E1C;
+    --warmblack2:#282623;
+    --grey:#BABABA;
+    --offwhite:#FAF8F7;
+    --justwhite:#FAF8F7;
+}
+
+/* HEADER */
+header{
+    height: auto;
+    /* height: 33.4rem; */
+
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+.header-section{
+    width: 90%;
+    margin: 0 auto;
+
+    color: var(--textcolor1);
+}
+.header-section-brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3rem 0 1.5rem 0;
+}
+.header-section-brand__img1 , .header-section-brand__img2{
+    height: 2.4rem;
+}
+.header-section-brand__img2{
+    margin-left: 1rem;
+}
+.header-section-title__h2{
+    width: 85%;
+    padding:1.5rem 0 1.5rem 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.header-section-text__p{
+    width: 85%;
+    padding: 1.5rem 0 1.5rem 0;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--softorange);
+}
+.header-section-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -21px;
+    right: -12.5%;
+    width: 75%;
+    height: 5rem;
+    
+    border: none;
+    border-radius: 0.1rem;
+    box-shadow: 2px 3px 36px -6px rgb(0 0 0 / 61%);
+}
+
+.header-section-button__a{
+    text-decoration: none;
+    font-size: 1.55rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    color: var(--textcolor2);
+}
+/* MAIN */
+
+/* CURRENCY */
+
+.currency{
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+    margin: 0 auto 6rem auto;
+}
+.currency__img{
+    display: flex;
+
+    margin: 4rem auto 3.5rem auto;
+    height: 19.5rem;
+}
+.currency-cripto{
+    display: flex;
+    flex-direction: column;
+}
+.currency-cripto-text{
+    display: flex;
+    flex-direction: column;
+}
+.currency-cripto-text__h2{
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.currency-cripto-text__p{
+    margin: 1rem 0 5rem 0;
+
+    text-align: center;
+    color: #757575;
+}
+.currency-cripto-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    /*box-shadow: 0 5px 25px -11px black;*/
+}
+.currency-cripto-list-table__ico{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.currency-cripto-list-table__h3{
+    margin: 1rem 0;
+    color: var(--bitcoin);
+}
+.currency-cripto-list-table__ico > a{
+    position: absolute;
+    right: 5%;
+}
+.currency-cripto-list-table__tr__td1, .currency-cripto-list-table__tr__td{
+    padding: .5rem .8rem .5rem 0;
+}
+.currency-cripto-list-table__tr__td1{
+    color: #B5B0Ac;
+}
+.currency-cripto-list-table__tr__td{
+    font-family: "Inter",sans-serif;
+}
+.currency-cripto-list-table__p{
+    padding: .7rem .7rem;
+    margin:1rem 0 -.5rem 0;
+
+    background-color: var(--softorange);
+}
+
+/* BENEFITS */
+
+.benefits{
+    height:auto;
+    padding-bottom: 8rem;
+    background-color: var(--warmblack1);
+    color: var(--textcolor1);
+}
+.benefits-content{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+}
+.benefits-maintext{
+    display: flex;
+    flex-direction: column;
+}
+.benefits-maintext__h2{
+    text-align: center;
+    padding: 7rem 0 1rem 0;
+}
+.benefits-maintext__p{
+    color:#808080;
+    text-align: center;
+    padding:1rem 0 1.5rem 0;
+}
+.benefits-live, .benefits-nohide, .benefits-compare, .benefits-confidence{
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin: 1rem 0 .5rem 0;
+    background-color: var(--warmblack2);
+    border-radius: 8px;
+}
+.benefits-live__p, .benefits-nohide__p, .benefits-compare__p, .benefits-confidence__p{
+    margin-top:1rem ;
+    color:#808080;
+}
+
+/* PLANS IMAGE */
+
+.plans{
+    display: flex;
+    flex-direction: column;
+}
+.plans-container-img{
+    height: 38.7rem;
+    background-image: url("../assets/imgs/bitcoinbaby.jpg ");
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    overflow: auto;
+}
+.plans__h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(20% + 50px);
+    font-size: 3.2rem;
+    color: var(--textcolor1);
+}
+/* PLANS TEXT */
+
+.plans-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.plans-maintext{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 2rem;
+}
+.plans-maintext__h3{
+    font-size: 2.4rem;
+}
+.plans-maintext__p{
+    margin-top: 1rem;
+    color:#757575;
+}
+
+/* PLANS CARDS */
+
+.plans-annual{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
+    box-shadow: 0px 0px 21px -7px black;
+    border-radius: 6px;
+    padding-bottom: 3rem;
+}
+.plans-annual-a{
+    color: var(--textcolor2) ;
+    text-align: center;
+    text-decoration: none;
+}
+.plans-annual__recommend{
+    display: block;
+    color: var(--textcolor1);
+    padding: 1rem 0;
+    position: relative;
+    bottom: 22px;
+    background-color: var(--bitcoin);
+    border-radius: 2rem;
+}
+.plans-annual__h5{
+    font-weight: bold;
+    font-size: 1.7rem;
+    position: relative;
+    bottom: 10px;
+}
+
+.plans-annual__prize{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+}
+.plans-annual__prize > b{
+    font-size:5.2rem ;
+}
+.plans-annual__save{
+    color: #757575;
+    margin: 1rem 0;
+}
+.plans-annual-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21rem;
+    margin: 0 auto;
+    height: 5rem;
+    border: 3px solid var(--bitcoin);
+}
+.plans-annual-button > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--textcolor2);
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4rem 0;
+    background-color: var(--bitcoin);
+    color:var(--textcolor1);
+}
+.link{
+    display: flex;
+    flex-direction: column;
+}
+.link__a{
+    display: inline-block;
+    margin: .5rem 0;
+    text-decoration: none;
+    color:var(--textcolor1);
+}
+.brand-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.brand-footer__img{
+    height: 3rem;
+}
+.brand-footer__p{
+    display: block;
+    margin: .3rem;
+    font-size: 1rem;
+}

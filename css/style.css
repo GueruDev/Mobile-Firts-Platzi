@@ -89,8 +89,8 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: 0 auto;
     bottom: -21px;
-    right: -12.5%;
     width: 75%;
     height: 5rem;
     
@@ -123,7 +123,7 @@ header{
     margin: 4rem auto 3.5rem auto;
     height: 19.5rem;
 }
-.currency-cripto{
+.currency-cripto, .currency-list-responsive{
     display: flex;
     flex-direction: column;
 }
@@ -159,6 +159,7 @@ header{
 .currency-commissions-list-table__ico{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 .currency-cripto-list-table__ico > a{
@@ -382,10 +383,40 @@ footer{
 /* RESPONSIVE */
 
 @media(min-width:600px){
+    .header-section-button{
+        max-width: 55rem;
+    }
     .plans-container{
         display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: space-around;
     }
+    .currency-list-responsive{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .benefits-responsive1, .benefits-responsive2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .benefits-live,
+    .benefits-nohide,
+    .benefits-compare,
+    .benefits-confidence{
+        width: 45%;
+    }
+    .currency-cripto-list-table__ico > a{
+        position:static;
+    }
+    .currency-commissions-list-table__ico > a{
+        position: static;
+    }
+    .currency-cripto-list, 
+    .currency-commissions-list{
+        max-width: 22rem;
+    }
+    
 }

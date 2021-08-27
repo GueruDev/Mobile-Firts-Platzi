@@ -64,7 +64,8 @@ header{
 
     padding: 3rem 0 1.5rem 0;
 }
-.header-section-brand__img1 , .header-section-brand__img2{
+.header-section-brand__img1,
+.header-section-brand__img2{
     height: 2.4rem;
 }
 .header-section-brand__img2{
@@ -140,39 +141,57 @@ header{
     text-align: center;
     color: #757575;
 }
-.currency-cripto-list{
+.currency-cripto-list,
+.currency-commissions-list {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /*box-shadow: 0 5px 25px -11px black;*/
-}
-.currency-cripto-list-table__ico{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 .currency-cripto-list-table__h3{
     margin: 1rem 0;
     color: var(--bitcoin);
 }
+.currency-commissions-list-table__h3{
+    margin: 1rem 0;
+    color: var(--secondaryblue);
+}
+.currency-cripto-list-table__ico,
+.currency-commissions-list-table__ico{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .currency-cripto-list-table__ico > a{
     position: absolute;
     right: 5%;
 }
-.currency-cripto-list-table__tr__td1, .currency-cripto-list-table__tr__td{
+.currency-commissions-list-table__ico > a{
+    position: absolute;
+    right: 5%;
+}
+.currency-cripto-list-table__tr__td1, 
+.currency-cripto-list-table__tr__td,
+.currency-commissions-list-table__tr__td1,
+.currency-commissions-list-table__tr__td{
     padding: .5rem .8rem .5rem 0;
 }
-.currency-cripto-list-table__tr__td1{
+.currency-cripto-list-table__tr__td1,
+.currency-commissions-list-table__tr__td1{
     color: #B5B0Ac;
 }
-.currency-cripto-list-table__tr__td{
+.currency-cripto-list-table__tr__td
+.currency-commissions-list-table__tr__td{
     font-family: "Inter",sans-serif;
 }
 .currency-cripto-list-table__p{
     padding: .7rem .7rem;
     margin:1rem 0 -.5rem 0;
-
+    
     background-color: var(--softorange);
+}
+.currency-commissions-list-table__p{
+    padding: .7rem .7rem;
+    margin:1rem 0 -.5rem 0;
 }
 
 /* BENEFITS */
@@ -268,6 +287,7 @@ header{
     display: flex;
     flex-direction: column;
     margin: 4rem 0;
+    max-width: 19rem;
     box-shadow: 0px 0px 21px -7px black;
     border-radius: 6px;
     padding-bottom: 3rem;
@@ -276,6 +296,7 @@ header{
     color: var(--textcolor2) ;
     text-align: center;
     text-decoration: none;
+    margin-bottom:5rem;
 }
 .plans-annual__recommend{
     display: block;
@@ -312,7 +333,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 21rem;
+    width: 80%;
     margin: 0 auto;
     height: 5rem;
     border: 3px solid var(--bitcoin);
@@ -356,4 +377,15 @@ footer{
     display: block;
     margin: .3rem;
     font-size: 1rem;
+}
+
+/* RESPONSIVE */
+
+@media(min-width:600px){
+    .plans-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
 }
